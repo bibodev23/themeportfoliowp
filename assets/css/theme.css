@@ -578,6 +578,8 @@ section.collaboration .container-collaboration .liste-collaboration .etape.anima
   text-align: center;
   border: 1px solid rgb(172, 172, 172);
   border-radius: 18px;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 35%;
   margin: 0 auto;
   padding: 20px;
@@ -994,8 +996,7 @@ footer .container-footer .footer-center .social-links {
   }
   section.avis .container-avis .liste-avis .avis {
     width: 90%;
-    height: 200px;
-    overflow: scroll;
+    height: auto;
   }
   section.faq .container-faq .liste-faq {
     width: 100%;

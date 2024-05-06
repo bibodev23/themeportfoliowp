@@ -13,11 +13,14 @@
                     $avis_id = get_the_ID();
                     $avis_content = get_field('commentaire');
                     $avis_autor = get_field('auteur');
+                    $avis_link = get_field('lien');
             ?>
                     <div class="avis element-animation">
 
                         <h4><?= $avis_content ?></h4>
-                        <p><?= $avis_autor ?></p>
+                        <a href="<?= $avis_link ?>" target="_blank"><p><?= $avis_autor ?></p></a>
+                        
+                        
                     </div>
             <?php
                 endwhile;
