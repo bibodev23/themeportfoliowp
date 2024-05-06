@@ -1,0 +1,48 @@
+.contact {
+    h3.title {
+        span {
+            &:nth-child(1) {
+                margin-right: 0;
+            }
+        }
+    }
+    .container-contact {
+        background: url("../images/contact_background.jpg") center/cover fixed;
+        min-height: 75vh;
+        .form {
+            background: rgba(255, 255, 255, 0.735);
+            width: 50%;
+            height: 50%;
+            padding: 20px 0;
+            opacity: 0;
+            &.animation {
+                animation: slide-in-bottom 0.8s ease-out both;
+            }
+            form {
+                width:75%;
+                margin: 0 auto;
+                color: rgb(0, 0, 0);
+                gap: 20px;
+                font-weight: 700;
+                .wpforms-field-container {
+                    width: 100%;                            
+                }
+                input, textarea, select {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid rgb(0, 0, 0);
+
+                }
+                .wpforms-submit-container {
+                    display: flex;
+                    justify-content: center;
+                    #wpforms-submit-22 {
+                        @include hero-button;
+                    }
+                }
+                
+            }
+
+        }
+    }
+}

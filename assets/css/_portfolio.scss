@@ -1,0 +1,121 @@
+.portfolio {
+    height: auto;
+    .container {
+        height: auto;
+        justify-items: center;
+        align-items: center;
+        padding: 0 5%;
+        .liste-projets {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            .projet {   
+                height: 200px;
+                width: 400px;
+                border: 1px solid rgba(0, 0, 0, 0.302);
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+                .projet-img {
+                    // display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.5s ease-in-out;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        // filter: grayscale(100%);
+                        object-fit: cover;
+                        object-position: center;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .projet-description {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #000000a3;
+                    padding: 10px;
+                    width:100%;
+                    height: 100%;
+                    color: white;
+                    transform: translate(-50%, -50%);
+                    transform-origin: right;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    gap: 10px;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                    text-align: center;
+                    h4 {
+                        font-size: 26px;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        border: 1px solid white;
+                        padding: 10px 20px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    // img {
+                    //     filter: grayscale(0);
+                    // }
+                    .projet-description {
+                        border-radius: 10px;
+                        z-index: 1;
+                        opacity: 1;
+                        animation: slide-in-bottom .7s ease-out both;
+                        h4{
+                            animation: slide-in-right .7s 0.3s ease-out both;
+                        }
+                        p {
+                            animation: slide-in-left .7s 0.5s ease-out both;
+                        }
+                        a{
+                            animation: bounce-in-top .7s 0.7s ease-out both;
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.838);
+                                color: rgba(0, 0, 0, 0.593);
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+                // &.animation {
+                //     &:nth-child(1) {
+                //         animation: slide-in-left 0.5s ease-out both;
+                //     }
+                //     &:nth-child(2) {
+                //         animation: slide-in-right 0.6s ease-out both;
+                //     }
+                //     &:nth-child(3) {
+                //         animation: slide-in-right 0.7s ease-out both;
+                //     }
+                //     &:nth-child(4) {
+                //         animation: slide-in-right 0.8s ease-out both;
+                //     }
+                //     &:nth-child(5) {
+                //         animation: slide-in-left 0.9s ease-out both;
+                //     }
+                //     &:nth-child(6) {
+                //         animation: slide-in-right 1s ease-out both;
+                //     }
+                    
+                // }
+            }
+        }
+    }
+}

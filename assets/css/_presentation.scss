@@ -1,0 +1,29 @@
+.container-presentation {
+    div {
+        min-width: 50%;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .presentation-img {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 50%;
+            max-height: 50%;
+            border-radius: 100%;
+        }
+        
+    }
+    .presentation-text {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            width: 75%;
+            text-align: justify;
+        }
+    }
+}

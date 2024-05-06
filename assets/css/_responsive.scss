@@ -1,0 +1,226 @@
+
+
+@media all and (max-width: 1280px) {
+    header {
+        padding: 150px 0 50px;
+        .navbar{
+            height: auto;
+            flex-direction: column;
+            padding: 10px 30px;
+            .logo {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .nom {
+                    font-size: 16px;
+                    width: 50%;
+                    #logo {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+                    .linkedin-github {
+                        display: none;
+                    }
+                }
+                .burger {
+                    display: flex;
+                    font-size: 22px;
+                    i {
+                        padding: 15px;
+                    }
+                    .fa-xmark {
+                        display: none;
+                    }
+                }
+            }
+            
+            .links {
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                ul {
+                    transform-origin: top;
+                    transform: scaleY(0);
+                    font-size: 13px;
+                    gap: 20px;
+                    flex-direction: column;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            &.active {
+                height: 100vh;
+                background-color: white;
+                z-index: 1;
+                justify-content: flex-start;
+                .logo {
+                    height: auto;
+                    .nom .linkedin-github {
+                        display: flex;
+                        gap: 20px;
+                        position: absolute;
+                        top: 10%;
+                        left: 10%;
+                    }
+                    .burger {
+                        .fa-xmark {
+                            display: block;
+                        }
+                        .fa-bars {
+                            display: none;
+                        }
+                    }
+                }
+                .links {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: auto;
+                    opacity: 1;
+                    ul {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        .hero {
+            padding: 0 25px;
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .btn {
+                a {
+                    font-size: 14px
+
+                }
+            }
+        }
+            
+    }
+    section {
+        .title {
+            @include section-title-responsive; 
+        }
+        h4 {
+            font-size: 20px;
+        }
+        &.presentation {
+            h3 {
+                padding-bottom: 10px;
+            }
+            .container-presentation {
+                flex-direction: column;
+                div {
+                    flex-wrap: wrap;
+                }
+                .presentation-text {
+                    max-width: none;
+                }
+            }
+        }
+        &.mes-services{
+            .container-services {
+                .liste-services {
+                    gap: 20px;
+                    padding: 0;
+                    .service {
+                        height: 300px;
+                        width: 75%;
+                    }
+                }
+            }
+            
+        }
+        &.collaboration{
+            .container-collaboration {
+                .liste-collaboration {
+                    gap: 20px;
+                    .etape {
+                        height: auto;
+                        flex-direction: column;
+                        gap: 15px;
+                        &:nth-child(1), &:nth-child(3) {
+                            flex-direction: column;
+                        }
+                        .etape-img {
+                            width: 90%;
+                            i {
+                                font-size: 70px;
+                            }
+                        }
+                         
+                        .etape-title-description {
+                            width: 75%;
+                            gap: 10px;
+                            .etape-title h4 {
+                                font-size: 20px;
+                            }
+                            .etape-description {
+                                width: 100%;
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+            h3 {
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+        &.portfolio {
+            .container-projets {
+                flex-direction: row;
+            }
+        }
+        &.avis {
+            .container-avis {
+                .liste-avis {
+                    .avis {
+                        width: 90%;
+                        height: 200px;
+                        overflow: scroll;
+                    }
+                }
+            }
+        }
+        &.faq {
+            .container-faq {
+                .liste-faq {
+                    width: 100%;
+                    .faq {
+                        min-height: 200px;
+                    }
+                    &.background{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.contact {
+            .container-contact {
+                .form {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer {
+        .container-footer {
+            flex-direction: column;
+            padding: 40px 0;
+            .footer-left, .footer-right, .footer-center {
+                width: 90%;
+            }
+        }
+    }
+}

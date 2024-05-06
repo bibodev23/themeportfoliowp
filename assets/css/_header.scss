@@ -1,0 +1,121 @@
+header {
+    padding: 250px 0 250px;
+    background: url("../images/hero1.webp") center/cover;
+    .navbar {
+        position: fixed;
+        height: auto;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 50px;
+        font-weight: 700;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.80);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.422);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 17px -5px, rgba(0, 0, 0, 0.3) 0px 8px 18px -8px;
+        .logo {
+            height: 100%;
+            .nom {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 22px;
+                text-transform: uppercase;
+                #logo {
+                    animation: slide-in-left 0.5s ease-out both;
+                }
+                .linkedin-github {
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 22px;
+                    animation: slide-in-bottom 0.5s ease-out both;
+                }
+            }
+            .burger {
+                display: none;
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+        .links {
+            display: flex;
+            align-items: center;
+            ul {
+                
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                li {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: black;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    a {
+                        @include link-navigation;
+                    }
+                }
+            }
+        }
+    }
+    .hero {
+        text-align: center;
+        padding: 0 50px;
+        overflow: hidden;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            h1 {
+                &.animation {
+                    animation: slide-in-left 0.5s ease-out both;
+                }
+            }
+            h2 {
+                &.animation {
+                    animation: slide-in-right 0.5s ease-out both;
+                }
+            }
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            button {
+                @include hero-button;
+                &:nth-child(1) {
+                    &.animation {
+                        animation: slide-in-left 0.5s ease-out both;
+                    }
+                }
+                &:nth-child(2) {
+                    &.animation {
+                        animation: slide-in-right 0.5s ease-out both;
+                    }
+                }
+            }
+        }
+    }
+}
